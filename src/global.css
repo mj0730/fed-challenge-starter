@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #2c89d4;
+}
+
+#root {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #00000088;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+  margin: 0.5rem;
+}
+
+.card .image {
+  flex: 0 0 100%;
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.card .title {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 1 100%;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.card .info {
+  flex: 0 0 100%;
+  font-size: 0.6rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card .info span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 4px;
+}
+
+.card .details {
+  color: #2c89d4;
+  flex: 0 0 100%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 1rem;
+  opacity: 0;
+}
+
+.card.active {
+  transition: 200ms;
+  box-shadow: 0 4px 8px -1px #00000055;
+  transform: translate(1px, -1px);
+}
+
+.card.active .details {
+  transition: 200ms;
+  opacity: 1;
+}
+
+.trainer-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.workouts-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #00000055;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.workouts-number {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
