@@ -122,6 +122,11 @@ a {
   line-height: 2;
 }
 
+/* fix for mui icon being slightly offset to the left */
+.workouts-overlay svg {
+  transform: translateX(2px);
+}
+
 .workouts-number {
   font-size: 1.1rem;
   font-weight: 800;
